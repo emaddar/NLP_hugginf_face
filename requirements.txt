@@ -1,5 +1,5 @@
 streamlit
-poandas
+pandas
 numpy
 re
 json
