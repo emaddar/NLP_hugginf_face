@@ -1,7 +1,6 @@
 streamlit
 pandas
 numpy
-json
 base64
 uuid
 transformers
