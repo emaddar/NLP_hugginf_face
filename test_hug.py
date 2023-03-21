@@ -17,3 +17,37 @@ import pandas as pd
 df = pd.DataFrame(ner_results)
 
 st.write(df)
+
+
+st.write(" ")
+st.write(" ")
+st.write(" ")
+
+st.write("flair/ner-french")
+
+from flair.data import Sentence
+from flair.models import SequenceTagger
+
+# load tagger
+tagger = SequenceTagger.load("flair/ner-french")
+
+sentence = Sentence(example)
+
+# predict NER tags
+tagger.predict(sentence)
+
+# print sentence
+st.write(sentence)
+
+# print predicted NER spans
+st.write('The following NER tags are found:')
+# iterate over entities and print
+for entity in sentence.get_spans('ner'):
+    st.write(entity)
+
+
+
+
+
+
+

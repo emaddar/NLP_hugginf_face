@@ -1,0 +1,49 @@
+2023-03-21 16:34:18,800 ----------------------------------------------------------------------------------------------------
+2023-03-21 16:34:18,802 Model: "SequenceTagger(
+  (embeddings): StackedEmbeddings(
+    (list_embedding_0): WordEmbeddings(
+      'glove'
+      (embedding): Embedding(400001, 100)
+    )
+    (list_embedding_1): FlairEmbeddings(
+      (lm): LanguageModel(
+        (drop): Dropout(p=0.05, inplace=False)
+        (encoder): Embedding(300, 100)
+        (rnn): LSTM(100, 2048)
+      )
+    )
+    (list_embedding_2): FlairEmbeddings(
+      (lm): LanguageModel(
+        (drop): Dropout(p=0.05, inplace=False)
+        (encoder): Embedding(300, 100)
+        (rnn): LSTM(100, 2048)
+      )
+    )
+  )
+  (word_dropout): WordDropout(p=0.05)
+  (locked_dropout): LockedDropout(p=0.5)
+  (embedding2nn): Linear(in_features=4196, out_features=4196, bias=True)
+  (rnn): LSTM(4196, 256, batch_first=True, bidirectional=True)
+  (linear): Linear(in_features=512, out_features=3, bias=True)
+  (loss_function): ViterbiLoss()
+  (crf): CRF()
+)"
+2023-03-21 16:34:18,804 ----------------------------------------------------------------------------------------------------
+2023-03-21 16:34:18,805 Corpus: "Corpus: 14987 train + 3466 dev + 3684 test sentences"
+2023-03-21 16:34:18,806 ----------------------------------------------------------------------------------------------------
+2023-03-21 16:34:18,807 Parameters:
+2023-03-21 16:34:18,808  - learning_rate: "0.100000"
+2023-03-21 16:34:18,809  - mini_batch_size: "32"
+2023-03-21 16:34:18,809  - patience: "3"
+2023-03-21 16:34:18,810  - anneal_factor: "0.5"
+2023-03-21 16:34:18,811  - max_epochs: "50"
+2023-03-21 16:34:18,812  - shuffle: "True"
+2023-03-21 16:34:18,813  - train_with_dev: "False"
+2023-03-21 16:34:18,813  - batch_growth_annealing: "False"
+2023-03-21 16:34:18,815 ----------------------------------------------------------------------------------------------------
+2023-03-21 16:34:18,816 Model training base path: "model/conllpp"
+2023-03-21 16:34:18,817 ----------------------------------------------------------------------------------------------------
+2023-03-21 16:34:18,818 Device: cpu
+2023-03-21 16:34:18,819 ----------------------------------------------------------------------------------------------------
+2023-03-21 16:34:18,820 Embeddings storage mode: gpu
+2023-03-21 16:34:18,820 ----------------------------------------------------------------------------------------------------
